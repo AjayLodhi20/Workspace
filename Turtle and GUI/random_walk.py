@@ -19,15 +19,5 @@ while True:
     chosen_direction = random.choice(directions)
     tim.setheading(chosen_direction)
     tim.forward(25)
-
-
-
-
-
-
-
-
-
-
 screen = Screen()
 screen.exitonclick()
