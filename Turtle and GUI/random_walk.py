@@ -15,7 +15,10 @@ def get_random_color():
     return (r,g,b)
 directions = [0, 90, 180, 270]
 while True:
-
+    tim.color(get_random_color())
+    chosen_direction = random.choice(directions)
+    tim.setheading(chosen_direction)
+    tim.forward(25)
 
 
 
