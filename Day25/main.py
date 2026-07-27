@@ -16,9 +16,9 @@
 #     print(temperatures)
 
 import pandas
-data = pandas.read_csv("weather_data.csv")
+# data = pandas.read_csv("weather_data.csv")
 # print(type(data))
-print(data["temp"])
+# print(data["temp"])
 
 # data_dict = data.to_dict()
 # print(data_dict)
@@ -29,7 +29,7 @@ print(data["temp"])
 # # avg = round((sum(temp_list)/len(temp_list)), 2)
 # # print(avg)
 #
-# print(data["temp"].mean())
+print(data.temp.mean())
 #
 # print(data["temp"].max())
 #
@@ -51,8 +51,13 @@ print(data["temp"])
 
 # create a df from scratch
 
-data_dict = {
-    "students": ["amy", "james", "angela"]
-    "scores": [76, 56, 65]
-}
+# data_dict = {
+#     "students": ["amy", "james", "angela"],
+#     "scores": [76, 56, 65]
+# }
+# data = pandas.DataFrame(data_dict)
+# print(data)
+#
+# data.to_csv("new_data.csv")
+
 
