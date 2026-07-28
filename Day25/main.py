@@ -29,7 +29,7 @@ import pandas
 # # avg = round((sum(temp_list)/len(temp_list)), 2)
 # # print(avg)
 #
-print(data.temp.mean())
+# print(data.temp.mean())
 #
 # print(data["temp"].max())
 #
@@ -61,3 +61,22 @@ print(data.temp.mean())
 # data.to_csv("new_data.csv")
 
 
+data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+print(data["Primary Fur Color"])
+
+fur_color_list = data["Primary Fur Color"].to_list()
+print(fur_color_list)
+
+Gray = fur_color_list.count("Gray")
+Cinnamon = fur_color_list.count("Cinnamon")
+Black = fur_color_list.count("Black")
+
+
+data_dict = {
+    'color': ["Gray", "Cinnamon", "Black"],
+    'counting': [Gray, Cinnamon, Black]
+}
+
+data = pandas.DataFrame(data_dict)
+print(data)
+data.to_csv("fur_colors.csv")
