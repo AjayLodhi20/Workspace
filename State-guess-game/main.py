@@ -1,30 +1,41 @@
 import turtle
 import pandas
-t = turtle.Turtle()
+
 screen = turtle.Screen()
 screen.title("U.S. states game")
 image = "blank_states_img.gif"
 screen.addshape(image)
+screen.setup(height=491, width=725)
 turtle.shape(image)
 
-game_is_on = True
-score = 0
-while game_is_on:
-    answer_state = screen.textinput(title=f"{score}/50 States Correct", prompt="what is the state name?")
-    guess = answer_state.title()
+data = pandas.read_csv("50_states.csv")
+all_states = data["state"].to_list()
 
-    data = pandas.read_csv("50_states.csv")
-    if data["state"].eq(guess).any():
-        name = data[data["state"] == guess]
-        x_cor = name.x
-        y_cor = name.y
-        score += 1
+guessed_states = []
+while len(guessed_states) < 50:
+    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct",
+                                    prompt="what's another state's name?").title()
+
+
+    if answer_state == "Exit":
+        break
+
+    if answer_state in all_states:
+        t = turtle.Turtle()
+        t.hideturtle()
         t.penup()
-        t.goto(x_cor,y_cor)
-        t.write(name["state"])
-        print(name)
-    else:
-        continue
+        state_data = data[data["state"] == answer_state]
+        t.goto(state_data.x.item(), state_data.y.item())
+        t.write(answer_state)
+        guessed_states.append(answer_state)
+missing_states = []
+for i in all_states:
+    if i not in guessed_states:
+        missing_states.append(i)
 
-
+states = {
+    "Missing states": missing_states
+}
+data = pandas.DataFrame(states)
+data.to_csv("missing states")
 screen.exitonclick()
