@@ -28,10 +28,7 @@ while len(guessed_states) < 50:
         t.goto(state_data.x.item(), state_data.y.item())
         t.write(answer_state)
         guessed_states.append(answer_state)
-missing_states = []
-for i in all_states:
-    if i not in guessed_states:
-        missing_states.append(i)
+missing_states = [i for i in all_states if i not in guessed_states]
 
 states = {
     "Missing states": missing_states
