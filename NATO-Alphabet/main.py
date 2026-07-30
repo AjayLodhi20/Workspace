@@ -21,7 +21,17 @@ for (index, row) in student_data_frame.iterrows():
 # {new_key:new_value for (index, row) in df.iterrows()}
 
 #TODO 1. Create a dictionary in this format:
-{"A": "Alfa", "B": "Bravo"}
+df = pandas.read_csv("nato_phonetic_alphabet.csv")
+alphabets = pandas.DataFrame(df)
+
+letters = [row.letter for (index, row) in df.iterrows()]
+code = [row.code for index,row in df.iterrows()]
+
+nato = {k:v for k, v in zip(letters,code)}
+print(nato)
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
+word_input = input("Enter a word: ").upper()
+nato_alphb = [nato[i] for i in word_input]
+print(nato_alphb)
 
