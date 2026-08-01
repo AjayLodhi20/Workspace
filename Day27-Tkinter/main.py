@@ -1,46 +1,27 @@
 from tkinter import *
 
-window = Tk() #screen creating
-window.title("first program") # title of the screen(on the top)
-window.minsize(width=500, height=300)
-window.config(padx=20, pady=20)
+window = Tk()
+window.minsize(width=400, height=200)
+window.title("Mile to Km converter")
+# is equal to label
+equal_label = Label(text="is equal to")
+equal_label.config(padx=100, pady=100)
+equal_label.grid()
 
-# Label
+# calculate kms label
+#
+km_label = Label()
 
-my_label = Label(text=" i am a label", font=("Aerial", 24, "bold"))# what is displayed inside the label(on screen)
-my_label.grid(column=0, row=0) #makes the label to write on the left side
-my_label.config(pady=50, padx=50)
+def km_calculate():
+    number = input.get()
+    number = int(number)
+    km = int(number * 1.6)
+    km_label.config((km))
 
-my_label["text"] = "New Text"
-my_label.config(text= "hello ajay")
-
-# button
-
-def button_clicked():
-    print("I got clicked")
-    new_text = input.get()
-    my_label.config(text=new_text)
-
-
-button = Button(text="click me", command=button_clicked)
+button = Button(text="Calculate",command=km_calculate)
 button.grid(column=1, row=1)
 
-# Entry
+input = Entry(width=20)
+input.grid(column= 2, row=3)
 
-input = Entry(width=10)
-print(input.get())
-input.grid(column=3, row=2)
-
-
-def new_button2():
-    print("hello new button")
-
-new_button = Button(text="check", command=new_button2)
-new_button.grid(row=0, column=2)
-
-
-
-
-
-
-window.mainloop() #keep the window on screen
+window.mainloop()
