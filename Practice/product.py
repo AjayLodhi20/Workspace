@@ -1,13 +1,13 @@
 class Product:
     _id_increment = 1
     def __init__(self, name: str, price: float):
-        self.product_id = Product._id_increment
+        self.product_id = str(Product._id_increment)
         self.name = name
         self.price = price
         Product._id_increment += 1
 
     def get_shipping_cost(self):
-        return self.price
+        pass
 
 class PhysicalProduct(Product):
     def __init__(self,name:str, price:float, weight_kg: float):
@@ -25,6 +25,10 @@ class DigitalProduct(Product):
     def __init__(self, name:str, price:float, url:str):
         super().__init__(name, price)
         self.download_url = url
+        self.shipping_rule = self.shipping_fee()
+
+    def shipping_fee(self):
+        return "0 dollars"
 
 
 
