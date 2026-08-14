@@ -4,10 +4,16 @@ import random
 
 BACKGROUND_COLOR = "#B1DDC6"
 card = {}
+to_learn = {}
 
-data = pandas.read_csv("words_to_learn.csv")
-to_learn = data.to_dict(orient = "records")
-print(to_learn)
+
+try:
+    data = pandas.read_csv("words_to_learn.csv")
+except FileNotFoundError:
+    original_data = pandas.read_csv("french_vocabulary.csv")
+    to_learn = original_data.to_dict(orient="records")
+else:
+    to_learn = data.to_dict(orient = "records")
 
 
 
@@ -31,7 +37,10 @@ def flip_card():
 def is_known():
     to_learn.remove(card)
     data = pandas.DataFrame(to_learn)
-    data.to_csv("words_to_learn.csv")
+    data.to_csv("words_to_learn.csv", index= False)
+
+
+    next_card()
 
 window = Tk()
 window.title("Flashy")
