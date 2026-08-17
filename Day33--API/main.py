@@ -1,5 +1,7 @@
 import requests
 from datetime import datetime
+from email.message import EmailMessage
+import smtplib
 
 
 MY_LAT = 20.593683
@@ -52,3 +54,13 @@ def is_night():
 
 if is_iss_overhead() and is_night():
 
+    msg = EmailMessage()
+
+    msg["subject"] = "ISS watch"
+    msg["from"] = "satyamlodhi123@gmail.com"
+    msg["to"] = "satyamlodhi735562@gmail.com"
+    msg.set_content("ISS is above your head...")
+
+    with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        server.starttls()
+        server.login("satyamlodhi123@gmail.com", 'uire emja eexd sgwg')
