@@ -1,0 +1,15 @@
+{% if number > 20 %}
+<h1>the {{ number }} is greater than 20</h1>
+
+{% elif number > 10 %}
+<h1>THe {{number}} is greater than 10 and less than20</h1>
+
+{% else %}
+
+<h1>{{number}} is not greater than 10</h1>
+
+{% endif %} {% for item in dictionary %}
+
+<h1>{{ item["key"] }}</h1>
+
+{% endfor %}

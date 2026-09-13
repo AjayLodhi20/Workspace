@@ -5,8 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c75f5118-2241-4938-9c01-50c3e8cba93a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Password Manager/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Password Manager/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WorkoutTracker/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WorkoutTracker/practice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WorkoutTracker/tried_but_error.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flask_playground/.flaskenv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flask_playground/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../habit-tracker/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pandas_intro/practice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rain_alert/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rain_alert/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rain_alert/send_whatsapp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/.idea/Day25.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/fur_colors.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/new_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day25/weather_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day27-Tkinter/playground.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Day27-Tkinter/playground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day31-Flashcard-app/words_to_learn.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Day31-Flashcard-app/words_to_learn.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Password Manager/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Password Manager/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quizzler-app-start/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/../quizzler-app-start/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snake_game/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../snake_game/data.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +48,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="3HcawJ5kwQv4M3YMH0tQchwvJ1U" />
   <component name="ProjectViewState">
     <option name="foldersAlwaysOnTop" value="false" />
@@ -33,15 +58,39 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortKey" value="BY_TIME_DESCENDING" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Day30_Improving_password_manager" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -58,5 +107,16 @@
       <updated>1786170048068</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

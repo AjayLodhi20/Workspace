@@ -25,3 +25,9 @@ class Car:
         self.color = kw.get("color")
 
 my_car = Car(make="Nissan", model= "GT -R")
+
+def name(*args):
+    names = []
+    for i in args:
+        names.append(i)
+    

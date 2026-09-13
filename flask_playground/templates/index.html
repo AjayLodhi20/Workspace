@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block css%}{{super()}}
+<link rel="stylesheet" href="url_for('static', filename='mycss.css')" />{%
+endblock %} {% block body %} {% include "nav.html" %}
+
+<h1>This is my first rendering template... so please give me some support</h1>
+
+<h1>the name of the file is: {{page_name}}</h1>
+{% endblock %}

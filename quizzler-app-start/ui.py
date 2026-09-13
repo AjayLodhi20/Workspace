@@ -17,7 +17,7 @@ class QuizInterface:
                               (300, 200,fill=THEME_COLOR,font=("Arial", 20, "italic"), width=580))
         self.canvas.grid(row=1,column=0, columnspan=2, pady=50)
         # label
-        self.score_label = Label(text=f"Score: {self.score}", fg= "white", bg=THEME_COLOR)
+        self.score_label = Label(text=f"Score: {self.quiz.score}", fg= "white", bg=THEME_COLOR)
         self.score_label.grid(row=0, column= 1)
 
 
