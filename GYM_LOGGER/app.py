@@ -22,9 +22,13 @@ db.init_app(app)
 
 
 class User(db.Model):
-    id: Mapped[int] = mapped_column(primary_key=True)
-    username: Mapped[str] = mapped_column(unique=True)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    username: Mapped[str] = mapped_column(String(50), unique=True)
     email: Mapped[str]
+    password: Mapped[str] = mapped_column(String(255))
+
+with app.app_context():
+    db.create_all()
 
 @app.route("/users")
 def user_list():
@@ -42,9 +46,19 @@ def login():
         email = request.form.get("email")
         password = request.form.get("password")
 
-        flash(f"Logged in successfully as {email}!")
-        return redirect(url_for("home"))
 
+        hashed_pass = generate_password_hash(password=password)
+        user = db.session.execute(
+                    db.select(User).filter_by(email=email)
+                ).scalar_one_or_none()
+
+        if user and check_password_hash(user.password, password):
+            flash(f"logged in successfully as {user.username}!")
+            return redirect(url_for("home"))
+
+        else:
+            flash(f"invalid email or password. Please try again.")
+            return redirect(url_for("login"))
     return render_template("auth/login.html")
 
 
@@ -56,6 +70,11 @@ def register():
         password = request.form.get("password")
 
         hashed_password = generate_password_hash(password)
+
+        new_user = User(username = username, email = email, password = hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+
 
         flash(f"Account created for {username}! Please log in.")
         return redirect(url_for("login"))
